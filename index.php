@@ -9,7 +9,7 @@ $categorias[]   = 'idoso';
 // print_r($categorias);
 
 $nome           = "Vitor";
-$idade          = 18;
+$idade          = 17;
 
 // var_dump($nome);
 // var_dump($idade);
