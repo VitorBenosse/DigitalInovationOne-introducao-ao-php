@@ -6,13 +6,36 @@ $categorias[]   = 'adolescentes';
 $categorias[]   = 'adulto';
 $categorias[]   = 'idoso';
 
-// print_r($categorias);
-
 $nome           = $_POST["nome"];
 $idade          = $_POST["idade"];
 
-// var_dump($nome);
-// var_dump($idade);
+if(empty($nome)) {
+    echo "Você deve informar um nome";
+    return;
+}
+
+if(strlen($nome) < 3 ) {
+    echo "O nome é muito pequeno";
+    return;
+}
+
+if(strlen($nome) > 40) {
+    echo "O nome é muito extenso";
+    return;
+}
+
+if(!is_string($nome)) {
+    echo "Informe um nome válido";
+    return;
+}
+
+if(!is_numeric($idade)) {
+
+    echo "Informe uma idade válida";
+    return;
+
+}
+
 
 if ($idade > 6) {
 
